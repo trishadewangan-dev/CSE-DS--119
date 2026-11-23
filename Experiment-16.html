@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Experimet-16  Implement form validation using JavaScript (basic and advanced).</title>
+    </head>
+    <body>
+        <h2>Registration Form</h2>
+        <form id="myform" onsubmit="return validateform()">
+            Enter Name:
+            <input type="text" id="name"><br><br>
+
+            Enter Email:
+            <input type="text" id="email"><br><br>
+
+            Enter Mobile Nunber:
+            <input type="text" id="mobile"><br><br>
+
+            Enter Password:
+            <input type="password" id="password"><br><br>
+
+            Confirm Password:
+            <input type="password" id="confirmPassword"><br><br>
+            <button type="submit">Register</button>
+        </form>
+        <p id="result"></p>
+
+        <script>
+            function validateform(){
+                let name = document.getElementById("name").value;
+                let email = document.getElementById("email").value;
+                let mobile = document.getElementById("mobile").value;
+                let password = document.getElementById("password").value;
+                let confirmPassword = document.getElementById("confirmPassword").value;
+            
+                if(name==""|| email=="" || mobile == "" || password == "" || confirmPassword == ""){
+                   alert("All fields are required");
+                   return false;               
+                }
+                
+                if(name == "" || !isNaN(name)){
+                    alert("Please enter a valid name:");
+                    return false;
+                }
+
+                if(!email.includes("@")|| !email.includes(".")){
+                    alert("Please enter a valid email:");
+                    return false;
+                }
+
+                if(isNaN(mobile) || mobile.length != 10){
+                    alert("Mobile number must conatin in 10 digit:");
+                    return false;
+                }
+
+                if(password.length <8){
+                    alert("Password must conatin at least 8 characters.");
+                    return false;
+                }
+
+                if(password != confirmPassword){
+                    alert("Password do not match");
+                    return false;
+                }
+
+                document.getElementById("result").innerHTML= "Registeration Successfully.";
+                return false;
+                }
+
+
+        </script>
+    </body>
+</html>

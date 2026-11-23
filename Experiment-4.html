@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Experiment-4 Create forms with HTML5 validation attributes.
+        </title>
+    </head>
+    <body>
+        <h1>HTML5 form validation</h1>
+        <form>
+            <label>Full Name:</label>
+            <input type="text" name="name" placeholder="Enter your full name" minlength="3" maxlength="30" required><br><br>
+
+            <label>Email:</label>
+            <input type="email" name="email" placeholder="Enter your email" required><br><br>
+            
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Enter your password" minlength="6" required><br><br>
+
+            <label>Age:</label>
+            <input type="number" name="age" placeholder="Enter your age" min="18" max="100" required><br><br>
+            
+            <label> Phone Number:</label>
+            <input type="tel" name="phone" placeholder="Enter your phone number" pattern="[0-9]{10}" required><br><br>
+       
+            <label>Gender:</label>
+            <input type="radio" name="gender" value="male" required>Male
+            <input type="radio" name="gender" value="female" required>Female
+            <input type="radio" name="gender" value="other" required><br><br>
+
+            <label>Country:</label>
+            <select name="country" required>
+                <option value="">Select your country</option>
+                <option value="usa">INDIA</option>
+                <option value="uk">United Kingdom</option>
+                <option value="canada">Canada</option>
+                <option value="australia">Australia</option>
+            </select><br><br>
+
+            <input type="checkbox"  required> 
+                 I agree to the terms and conditions<br><br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+
+    </body>
+</html>
