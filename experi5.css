@@ -1,0 +1,11 @@
+body{
+    margin:20px;
+
+}
+.external{
+    color:purple;
+    font-size:20px;
+    background-color:lightblue;
+    padding:10px;
+    border:2px solid purple;
+}
